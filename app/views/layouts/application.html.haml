@@ -10,7 +10,7 @@
 %body
 	%header
 		%wrapper.clearfix
-			#logo= link_to "Muse", root_path
+			#logo= link_to "Dribble Mock", root_path
 			%nav
 				- if user_signed_in?
 					= link_to current_user.name, edit_user_registration_path
@@ -20,5 +20,7 @@
 					= link_to "Sign Up", new_user_registration_path, class: "button"
 	%p.notice= notice
 	%p.alert= alert
+	
+	.wrapper
+		= yield
 
-	= yield
