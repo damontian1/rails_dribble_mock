@@ -1,5 +1,6 @@
 - @posts.each do |post|
 	%h2= link_to post.title, post
+	= image_tag post.image.url(:small), class: "image1" 
 	%p= post.user.name
 
 = link_to "Add New Inspiration", new_post_path
