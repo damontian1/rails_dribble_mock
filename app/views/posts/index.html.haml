@@ -1,4 +1,6 @@
 - @posts.each do |post|
 	%h2= link_to post.title, post
+	%p= post.user.name
 
 = link_to "Add New Inspiration", new_post_path
+= link_to "Sign Out", destroy_user_session_path, method: :delete
